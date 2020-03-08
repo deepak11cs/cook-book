@@ -1,5 +1,12 @@
 *{
     line-height: 1.5;
     box-sizing: border-box;
-    background-color: silver;
+    background-color: green;
+}
+.navlink{
+    text-decoration: none;
+    
+}
+.navlinks > li{
+    list-style-type: none;
 }
