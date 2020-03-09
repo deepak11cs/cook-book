@@ -1,12 +1,47 @@
 *{
-    line-height: 1.5;
     box-sizing: border-box;
-    background-color: green;
+    margin: 0 0; 
+}
+body::before{
+    content: '';
+    position: absolute;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    background-size: cover;
+    background-position: 70% 70%;
+    z-index: -1;
+    background-image: url(/static/images/background1.jpg);
+}
+.navbar{
+    position: fixed;
+    width: 100vw;
+    height: 100px;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+}
+.navlinks{
+    padding-left:0;
+    display: flex;
+    height: 100%;
+    margin-right: 30px;
+    justify-content: flex-end;
+    align-items: center;
 }
 .navlink{
     text-decoration: none;
-    
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
 }
 .navlinks > li{
     list-style-type: none;
+
+}
+main{
+    margin-top: 100px;
 }
