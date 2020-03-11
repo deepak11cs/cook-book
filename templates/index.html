@@ -6,15 +6,17 @@
         <meta charset="utf-8">
     </head>
     <body>
+        <div id="cover">
         <div id="intro">
             <nav class="navbar">
+                
                 <ul class="navlinks">
                     <li><a class="navlink" href="#intro">Intro</a></li>
                     <li><a class="navlink" href="#features">Features</a></li>
                     <li><a class="navlink" href="#contact">Contact</a></li>
-                    <li></li>
                 </ul>
-                <a class="navlink" href="#">Login</a>
+                <a class="navlink" href="#login" onclick="display()">Login</a>
+
             </nav>
             <div id="welcome">
                 <h1>Easy Cook Book</h1>
@@ -31,5 +33,26 @@
         <div id="contact">
             Here goes the social media links!
         </div>
+        </div>
+        <div id="form">
+            <a style="background-color: red; padding: 7px; border-radius: 50%; color: white; text-decoration: none; position: absolute; right: -7px; top: -7px;" href="#login" onclick="hide()">X</a>
+            <form method="POST" action="/login">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email"><br>
+                <label for="pass">Pass</label>
+                <input type="password" name="pass" id="pass"><br>
+                <input type="submit" onclick="display()">
+            </form>
+        </div>
+        <script>
+            function display(){
+                document.getElementById("form").style.visibility = "visible";
+                document.getElementById("cover").style.pointerEvents = "none";
+            }
+            function hide(){
+                document.getElementById("form").style.visibility="hidden";
+                document.getElementById("cover").style.pointerEvents="auto";
+            }
+        </script>
     </body>
 </html>
