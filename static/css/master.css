@@ -32,7 +32,7 @@ body::before{
     display: flex;
     background-color: rgba(29, 24, 24, 0.5);
 }
-@media (max-width: 600px){
+@media (max-width: 767px){
     .navbar{
         flex-wrap: wrap;
     }
