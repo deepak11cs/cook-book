@@ -1,0 +1,14 @@
+
+{% extends "registration.html" %}
+{% block formcontent%}
+<form method="POST" action="">
+
+    {{form.hidden_tag() }}
+    {{ form.username.label(class="css-class-to-add")}}
+    {{ form.username(class="input")}}
+
+    {{ form.email(class="input")}}
+    {{ form.password(class="input")}}
+
+</form>
+{%endblock formcontent%}

@@ -16,7 +16,7 @@
                     <li><a class="navlink" href="#features">Features</a></li>
                     <li><a class="navlink" href="#contact">Contact</a></li>
                 </ul>
-                <a class="navlink" href="#login" onclick="display()">Login</a>
+                <a class="navlink" href="/register#login" onclick="display()">Login</a>
 
             </nav>
             <div id="welcome">
@@ -24,7 +24,7 @@
                 <p>Cooking is an art and 
                     Everyone is a unique artist!
                 </p>
-                <a href="#">Explore</a>
+                <a href="/explore">Explore</a>
             </div>
         </div>
 
@@ -36,16 +36,15 @@
         </div>
         </div>
         <div id="form">
-            <a style="background-color: red; padding: 7px; border-radius: 50%; color: white; text-decoration: none; position: absolute; right: -7px; top: -7px;" href="#login" onclick="hide()">X</a>
-            <form method="POST" action="/login">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email"><br>
-                <label for="pass">Pass</label>
-                <input type="password" name="pass" id="pass"><br>
-                <input type="submit" onclick="display()">
-            </form>
+            <a style="background-color: black; padding: 7px; border-radius: 50%; color: white; text-decoration: none; position: absolute; right: -7px; top: -7px; z-index: 10;" href="#login" onclick="hide()">X</a>
+            {% block content %}
+            {% endblock content%}
         </div>
         <script>
+            let form = "{{message}}";
+            if(form){
+                display();
+            }
             function display(){
                 document.getElementById("form").style.visibility = "visible";
                 document.getElementById("cover").style.pointerEvents = "none";
