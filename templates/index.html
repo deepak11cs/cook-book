@@ -44,6 +44,14 @@
             let form = "{{message}}";
             if(form){
                 display();
+                if(form == "Login"){
+                    document.getElementById("login-link").style.pointerEvents = "none";
+                    document.getElementById("login-link").style.cursor = "default"
+                }
+                else{
+                    document.getElementById("register-link").style.pointerEvents = "none";
+                    document.getElementById("register-link").style.cursor = "default"
+                }
             }
             function display(){
                 document.getElementById("form").style.visibility = "visible";

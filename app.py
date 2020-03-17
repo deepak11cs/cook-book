@@ -27,8 +27,18 @@ def index():
 @app.route('/register')
 def register():
     form = RegistrationForm()
-    return render_template('register.html',title="Register", form=form,message="displayForm")
+    return render_template('register.html',title="Register", form=form,message="Register")
+
+@app.route('/login',methods=["GET","POST"])
+def login():
+    form = LoginForm()
+    return render_template('login.html',title="login", form=form,message='Login')
         
+
+@app.route('/explore')
+def explore():
+    return render_template('explore.html')
+
 @app.errorhandler(404)
 def notFound(e):
     return "<h1>Error 404!</h1>"
